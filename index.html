@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat app</title>
+     <link rel="stylesheet" href="./public/style.css"></link>
+     <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAIrcrtL32QuAhbIFkPbRWjfXrRHVpEeDo",
+        authDomain: "chat-app-vicky.firebaseapp.com",
+        projectId: "chat-app-vicky",
+        storageBucket: "chat-app-vicky.appspot.com",
+        messagingSenderId: "485344348000",
+        appId: "1:485344348000:web:d57d9cff49848eaa70c005",
+        measurementId: "G-94K9PXGH98"
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+</head>
+<body>
+        <section class="chat_section">
+              <div class="brand">
+                 <img src="./public/wassup.png" height="40" alt="">
+                   <h1>Chat app</h1>
+              </div>
+                <div class="message__area"></div>
+                       <div>
+                            <textarea id="textarea" cols="30" rows="1" placeholder="write a message....."></textarea>
+                       </div>
+        </section>
+        <script src="./socket.io/socket.io.js"></script>
+        <script src="./public/client.js"></script>
+</body>
+</html>
